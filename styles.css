@@ -1,0 +1,27 @@
+body {
+    font-size: 100px;
+    text-align: center;
+    background-size: 100%;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明的灰色背景 */
+    z-index: -1; /* 将其置于页面的底层 */
+  }
+  
+  input {
+    width: 350px;
+    height: 140px;
+    font-size: 80px;
+  }
+  
+  #result {
+    color: white;
+  }
+  
