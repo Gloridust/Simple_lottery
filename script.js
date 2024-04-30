@@ -6,8 +6,14 @@ fetch('names.txt')
     // 使用 names 数组进行后续操作
 
     var name;
-    var index = -1;
     var time;
+    var index = -1;
+
+    function getRandomIndex() {
+      var randomArray = new Uint32Array(1);
+      window.crypto.getRandomValues(randomArray);
+      return randomArray[0] % names.length;
+    }
 
     function begin() {
       document.getElementById("btnBegin").disabled = true;
@@ -16,7 +22,7 @@ fetch('names.txt')
 
     function chouqian() {
       if (names.length > 0) {
-        index = Math.floor(Math.random() * 1000 % names.length);
+        index = getRandomIndex();
         name = names[index];
         document.getElementById("result").innerHTML = name;
         time = window.setTimeout(chouqian, 2);
