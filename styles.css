@@ -4,12 +4,15 @@
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid gold; /* 将边框样式改为金色 */
 }
 
 body {
   font-size: 40px;
   text-align: center;
-  background-size: 100%;
+  background-size: cover;
+  background-image: url("./bg.png"); /* 更换背景图片 */
+  background-color: #f3f3f3; /* 添加备用背景颜色 */
 }
 
 body::before {
@@ -27,6 +30,18 @@ input {
   width: 180px;
   height: 80px;
   font-size: 50px;
+  margin-top: 20px; /* 调整按钮间距 */
+  margin-bottom: 20px; /* 调整按钮间距 */
+  background-color: gold; /* 更改按钮背景颜色 */
+  color: white; /* 更改按钮文本颜色 */
+  border: none; /* 去除按钮边框 */
+  border-radius: 10px; /* 添加按钮圆角 */
+  cursor: pointer; /* 添加鼠标悬停效果 */
+  transition: background-color 0.3s, color 0.3s; /* 添加按钮过渡效果 */
+}
+
+input:hover {
+  background-color: #ffd700; /* 悬停时背景颜色变浅 */
 }
 
 #result {
